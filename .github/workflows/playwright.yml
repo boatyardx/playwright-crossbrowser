@@ -24,14 +24,14 @@ jobs:
     - name: Run Playwright tests
       run: npx playwright test
     - name: Upload Report
-          if: always()
-          uses: peaceiris/actions-gh-pages@v3
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./playwright-report
-            destination_dir: ${{ github.ref_name }}-${{ github.run_id }}
+      if: always()
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./playwright-report
+        destination_dir: ${{ github.ref_name }}-${{ github.run_id }}
     - name: Summary
-          if: always()
-          run: |
-              echo "The report will be available at https://glowing-adventure-wl8m1nm.pages.github.io/${{ github.ref_name }}-${{ github.run_id }}/" >> $GITHUB_STEP_SUMMARY
+      if: always()
+      run: |
+          echo "The report will be available at https://glowing-adventure-wl8m1nm.pages.github.io/${{ github.ref_name }}-${{ github.run_id }}/" >> $GITHUB_STEP_SUMMARY
     
