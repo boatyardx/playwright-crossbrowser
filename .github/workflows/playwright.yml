@@ -35,5 +35,5 @@ jobs:
     - name: Summary
       if: always()
       run: |
-          echo "The report will be available at https://glowing-adventure-wl8m1nm.pages.github.io/${{ github.ref_name }}-${{ github.run_id }}/" >> $GITHUB_STEP_SUMMARY
+          echo "The report will be available at https://boatyardx.github.io/playwright-crossbrowser/${{ github.ref_name }}-${{ github.run_id }}/" >> $GITHUB_STEP_SUMMARY
     
